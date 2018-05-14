@@ -1,0 +1,16 @@
+
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+
+      <li *ngFor="let tab of tabs" class="tab col s3" #tabList>
+        <a [href]="tab.id">{{tab.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <div id="vk" class="col s12">{{tabList}}</div>
+  <div id="facebook" class="col s12">Test 2</div>
+  <div id="instagram" class="col s12">Test 3</div>
+  <div id="twitter" class="col s12">Test 4</div>
+</div>
+      

@@ -4,7 +4,7 @@ export class DataCard {
 
   surname?: string
 
-  image?: string
+  image?: string = 'no avatar'
 
   born?: string
 

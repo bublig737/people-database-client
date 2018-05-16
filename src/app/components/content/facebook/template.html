@@ -1,0 +1,31 @@
+<div class="container">
+
+
+  <div class="scard" *ngFor="let person of data">
+
+
+    <div class="scard-content">
+
+      <div class="scard-avatar">Avatar</div>
+
+      <div class="hr"></div>
+
+      <div class="scard-data">
+
+        <span class="name-surname">{{person.name}}&nbsp;{{person.surname}}</span>
+        <br>
+        <span class="born">дата рождения&nbsp;&nbsp;</span><p>{{person.born}}</p>
+        <br>
+        <span class="city">город&nbsp;&nbsp;</span><p>{{person.city}}</p>
+        <br>
+        <span class="work">работа&nbsp;&nbsp;</span><p>{{person.work}}</p>
+        <br>
+        <span class="education">образование&nbsp;&nbsp;</span><p>{{person.education}}</p>
+
+      </div>
+    <!-- </div>
+
+    <div class="scard-actions">Кнопочки</div>
+
+  </div> -->
+</div>

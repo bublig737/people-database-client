@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as M from 'materialize-css'
-// import { DataCard } from '../../models'
+import { DataCard } from '../../models';
+
 
 @Component({
   selector: 'tabs-component',
@@ -8,6 +9,59 @@ import * as M from 'materialize-css'
   styleUrls: ['./style.styl']
 })
 export class TabsComponent implements OnInit {
+
+   facebookData: DataCard[] = [
+    {
+    name: 'george',
+    surname: 'Hetman',
+    born: '1997.08.19',
+    city: 'Odessa',
+    education: 'pty',
+    work: 'programmer'
+  },
+    {
+    name: 'roma',
+    surname: 'Hetman',
+    born: '1997.08.19',
+    city: 'Odessa',
+    education: 'pty',
+    work: 'programmer'
+  },
+    {
+    name: 'Denis',
+    surname: 'Hetman',
+    born: '1997.08.19',
+    city: 'Odessa',
+    education: 'pty',
+    work: 'programmer'
+  }
+]
+   vkData: DataCard[] = [
+    {
+    name: 'Artur',
+    surname: 'Hetman',
+    born: '1997.08.19',
+    city: 'Odessa',
+    education: 'pty',
+    work: 'programmer'
+  },
+    {
+    name: 'Argun',
+    surname: 'Hetman',
+    born: '1997.08.19',
+    city: 'Odessa',
+    education: 'pty',
+    work: 'programmer'
+  },
+    {
+    name: 'Denis',
+    surname: 'Hetman',
+    born: '1997.08.19',
+    city: 'Odessa',
+    education: 'pty',
+    work: 'programmer'
+  }
+]
 
   tabs: {}[] = [ 
   {name: 'VK', id: '#vk'}, 
@@ -23,30 +77,4 @@ export class TabsComponent implements OnInit {
       var instance = M.Tabs.init(elems, {});
     });
   }
-  
-
-  rtl: boolean = false;
-  outlined: boolean = false;
-
-  get dir() {
-    return this.rtl ? "rtl" : null;
-  }  // card: DataCard = {
-    
-  // name: 'Денис',
-
-  // surname: 'Гетьман',
-
-  // image: '../../resources/img/no-img.png',
-
-  // born: '20',
-
-  // city: 'Одесса',
-
-  // work: 'Программист',
-
-  // education: 'ПТУ'
-
-  // }
-  
- 
 }

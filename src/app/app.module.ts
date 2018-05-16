@@ -1,11 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent, HeaderComponent, SideNavComponent, TabsComponent } from './components';
+import { 
+  AppComponent, 
+  HeaderComponent, 
+  SideNavComponent, 
+  TabsComponent, 
+  FacebookContentComponent,
+  VKContentComponent } from './components';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, SideNavComponent, TabsComponent
+    AppComponent, 
+    HeaderComponent, 
+    SideNavComponent, 
+    TabsComponent, 
+    FacebookContentComponent,
+    VKContentComponent
   ],
   imports: [
     BrowserModule

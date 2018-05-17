@@ -1,18 +1,81 @@
-<nav> <!-- navbar content here  --> </nav>
+<nav>
+  <!-- navbar content here  -->
+</nav>
 
 <ul id="slide-out" class="sidenav">
-  <li><div class="user-view">
-    <div class="background">
-      <img src="">
+  <li>
+    <div class="user-view">
+
     </div>
-    <a href="#user"><img class="circle" src=""></a>
-    <a href="#name"><span class="white-text name">John Doe</span></a>
-    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-  </div></li>
-  <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-  <li><a href="#!">Second Link</a></li>
-  <li><div class="divider"></div></li>
-  <li><a class="subheader">Subheader</a></li>
-  <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <a class="waves-effect howsearch">
+      <div class="togglesearch"></div>ID</a>
+
+  </li>
+  <li class="datacontent">
+    <ul>
+      <li>
+        <div class="row">
+          <div class="col s12">
+            <div class="input-field inline">
+              <input id="first_name" type="text">
+              <label for="first_name">Имя</label>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col s12">
+            <div class="input-field inline">
+              <input id="last_name" type="text">
+              <label for="last_name">Фамилия</label>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="selectlist">
+
+        <span class="selectlabel">Возраст</span>
+        <div class="input-field col s6 selectblock">
+          <select>
+            <option value="" disabled selected>От</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+
+        </div>
+
+        <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+
+        <div class="input-field col s6 selectblock">
+          <select>
+            <option value="" disabled selected>До</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+
+        </div>
+      </li>
+      <li class="radiolist">
+        <span class="radiolabel">Пол</span>
+        <p class="radioitem">
+          <label>
+            <input name="group1" type="radio" checked />
+            <span>муж</span>
+          </label>
+        </p>
+        <p class="radioitem">
+          <label>
+            <input name="group1" type="radio" />
+            <span>жен</span>
+          </label>
+        </p>
+      </li>
+    </ul>
+  </li>
+
+
 </ul>
 <a href="#" data-target="slide-out" class="sidenav-trigger"></a>

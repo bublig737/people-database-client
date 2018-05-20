@@ -1,26 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import * as M from 'materialize-css'
+import { DataCard } from '../../../models'
 
 
 @Component({
-  selector: 'tabs-component',
-  templateUrl: './template.html',
-  styleUrls: ['./style.styl']
+  selector: 'linkedin-content-component',
+  templateUrl: '../template.html',
+  styleUrls: ['../style.styl']
 })
-export class TabsComponent implements OnInit {
+export class LinkedinContentComponent {
 
-  tabs: {}[] = [ 
-  {name: 'VK', id: '#vk'}, 
-  {name: 'Facebook', id: '#facebook'}, 
-  {name: 'Twitter', id: '#twitter'}, 
-  {name: 'Instagram', id: '#instagram'}, 
-  {name: 'Telegram', id: '#telegram'}, 
-  {name: 'Linkedin', id: '#linkedin'}]
+  @Input() data: DataCard[]
 
-  ngOnInit(){
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.tabs');
-      var instance = M.Tabs.init(elems, {});
-    });
-  }
 }

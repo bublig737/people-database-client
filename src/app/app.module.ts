@@ -7,7 +7,11 @@ import {
   SideNavComponent, 
   TabsComponent, 
   FacebookContentComponent,
-  VKContentComponent } from './components';
+  VKContentComponent,
+  InstagramContentComponent, 
+  LinkedinContentComponent,
+  TelegramContentComponent,
+  TwitterContentComponent } from './components';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import {
     SideNavComponent, 
     TabsComponent, 
     FacebookContentComponent,
-    VKContentComponent
+    VKContentComponent, 
+    InstagramContentComponent, 
+    LinkedinContentComponent, 
+    TelegramContentComponent, 
+    TwitterContentComponent
   ],
   imports: [
     BrowserModule

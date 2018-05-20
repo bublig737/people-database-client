@@ -13,5 +13,6 @@
     "src/environments": true,
     "tsconfig.json": false,
     "tslint.json": true
+    
   }
 }

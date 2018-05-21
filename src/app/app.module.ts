@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule }   from '@angular/common/http';
+
 
 import { 
-  AppComponent, 
+  AppComponent,
   HeaderComponent, 
   SideNavComponent, 
   TabsComponent, 
@@ -27,9 +29,11 @@ import {
     TwitterContentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
+
 export class AppModule { }

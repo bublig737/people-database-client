@@ -1,16 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  get(url, query) {
+  get(url: string) {
 
-    console.log('Идет гет запрос в HttpService с данными', query);
 
-    return this.http.get(url, query)
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': 'my-auth-token',
+        'Access-Control-Allow-Origin': '*'
+      })
+    };
+
+    console.log('Идет гет запрос в HttpService с данными', httpOptions);
+
+    return this.http.get(url, httpOptions)
 
   }
 }

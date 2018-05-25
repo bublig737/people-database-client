@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as M from 'materialize-css'
-import { DataCard } from '../../models';
+import { DataCard, DataBlock } from '../../models/classes';
 
 
 @Component({
@@ -9,6 +9,9 @@ import { DataCard } from '../../models';
   styleUrls: ['./style.styl']
 })
 export class TabsComponent implements OnInit {
+
+
+  
 
    facebookData: DataCard[] = [
     {

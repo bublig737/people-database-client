@@ -13,8 +13,8 @@ export class VKService {
 
    
 
-    this.http.get('http://api.vk.com/method/database.getCountries')
-      .subscribe((data) => { return data })
+    this.http.get('http://api.vk.com/method/database.getCountries?callback=JSONP_CALLBACK&access_token=a4dcd0a87da10512ef9d3188e78cc4f56130f718d77ada38c1e20a1e7b93a605e4a57a6da118d3a149917')
+
   }
 
   // getCities(id) {

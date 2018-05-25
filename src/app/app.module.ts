@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule }   from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
+
+import { JsonpModule }   from '@angular/http';
 
 
 import { 
@@ -29,7 +32,8 @@ import {
     TwitterContentComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule, JsonpModule, FormsModule
+    // , HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

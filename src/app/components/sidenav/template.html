@@ -7,16 +7,29 @@
   <li>
     <div class="user-view">
     </div>
-    <a class="waves-effect howsearch"> <div class="togglesearch"></div> ID </a>
+    <a class="waves-effect howsearch" (click)="isIdSearch = !isIdSearch; name=''; surname=''; id=''"> 
+      <div class="togglesearch"></div> {{isIdSearch ? "DATA" : "ID"}} 
+    </a>
   </li>
 
-  <li class="datacontent">
+  <li class="form-id"  class="{{!isIdSearch ? 'form-id hide' : 'form-id'}}" >
+      <div class="row">
+        <div class="col s12">
+          <div class="input-field inline">
+            <input id="first_name" [(ngModel)]="id" type="text">
+            <label for="first_name">id / login</label>
+          </div>
+        </div>
+      </div>
+  </li>
+
+  <li class="{{isIdSearch ? 'form-data hide' : 'form-data'}}">
     <ul>
       <li>
         <div class="row">
           <div class="col s12">
             <div class="input-field inline">
-              <input id="first_name" type="text">
+              <input id="first_name" [(ngModel)]="name" type="text">
               <label for="first_name">Имя</label>
             </div>
           </div>
@@ -27,7 +40,7 @@
         <div class="row">
           <div class="col s12">
             <div class="input-field inline">
-              <input id="last_name" type="text">
+              <input id="last_name" [(ngModel)]="surname" type="text">
               <label for="last_name">Фамилия</label>
             </div>
           </div>
@@ -37,14 +50,14 @@
       <li class="selectlist">
         <span class="selectlabel">Возраст</span>
         <div class="input-field col s6 selectblock">
-          <select class="otAge">
+          <select class="age_from">
             <option value="0" disabled selected>От</option>
             <option *ngFor="let item of age" [value]="item">{{item}}</option>
           </select>
         </div>
         <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span>
         <div class="input-field col s6 selectblock">
-          <select class="doAge">
+          <select class="age_to">
             <option value="0" disabled selected>До</option>
             <option *ngFor="let item of age" [value]="item">{{item}}</option>
           </select>
@@ -55,13 +68,13 @@
         <span class="radiolabel">Пол</span>
         <p class="radioitem">
           <label>
-            <input name="group1" type="radio" checked />
+            <input name="group1" (change)="sex = 1" type="radio" />
             <span>муж</span>
           </label>
         </p>
         <p class="radioitem">
           <label>
-            <input name="group1" type="radio" />
+            <input name="group1" (change)="sex = 2" type="radio" />
             <span>жен</span>
           </label>
         </p>
@@ -71,18 +84,18 @@
         <span class="selectlabel">Регион</span>
         <div class="input-field col s12 regionselect">
           <select class="region-select-block country">
-            <option class="select-text" value="" disabled selected>Страна</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+            <option class="select-text" value="0" disabled selected>Страна</option>
+            <option value="1">Россия</option>
+            <option value="2">Америка</option>
+            <option value="3">Китай</option>
           </select>
         </div>
         <div class="input-field col s12 regionselect">
           <select class="region-select-block city">
-            <option class="select-text" value="" disabled selected>Город</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+            <option class="select-text" value="0" disabled selected>Город</option>
+            <option value="32">Москва</option>
+            <option value="33">Вашингтон</option>
+            <option value="34">Гон-Конг</option>
           </select>
         </div>
       </li>

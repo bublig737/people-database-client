@@ -1,1 +1,0 @@
-export * from './dataCard/class'

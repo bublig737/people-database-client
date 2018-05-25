@@ -1,10 +1,11 @@
+
 export class DataCard {
 
   name?: string
 
   surname?: string
 
-  image?: string = 'no avatar'
+  image?: string
 
   born?: string
 

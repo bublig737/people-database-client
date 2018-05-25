@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import * as M from 'materialize-css'
+
 import { age } from '../../shared/data/age'
+import { getSelectData } from '../../shared/functions'
+import { DataForm } from '../../models/interfaces';
+
 import { VKService } from '../../services/API/vk'
 import { HttpService } from '../../services/http'
 
@@ -13,44 +17,56 @@ import { HttpService } from '../../services/http'
 })
 export class SideNavComponent implements OnInit {
 
-  constructor(private vkService: VKService){
+  name: string
+  surname: string
+  sex: number = 0
+  id: string
 
-  }
+  isIdSearch: boolean = false
 
-  age: number[] = age
-
+  constructor(private vkService: VKService) {}
 
   ngOnInit() {
 
     document.addEventListener('DOMContentLoaded', function () {
+
       var select = document.querySelectorAll('select');
       var selectInstance: any = M.FormSelect.init(select, {})
       var sidenav = document.querySelectorAll('.sidenav');
       var sidenavInstance = M.Sidenav.init(sidenav, {});
-      // this.otAgeValue = M.FormSelect.getInstance(document.querySelector('.region-select-block'));
+
     });
   }
 
-
   submit() {
 
-    console.log(
-     this.vkService.getCountries(), 'Запрос на вк сервис'
-    );
-    // console.log(M.FormSelect.getInstance(document.querySelector('.country')).getSelectedValues());
+    let dataform: DataForm
+
+    if (this.id) {
+
+      dataform = {
+
+        id: this.id
+
+      }
+    }
+
+    else {
+
+      dataform = {
+
+        name: this.name,
+        surname: this.surname,
+        sex: this.sex,
+        age_from: getSelectData('.age_from'),
+        age_to: getSelectData('.age_to'),
+        country: getSelectData('.country'),
+        city: getSelectData('.city')
+
+      }
+    }
+
+    console.log('Данные, полученные с формы:', dataform)
 
   }
-}
-
-
-
-
-
-
-const selectValue = (selector: string): string[] => {
-
-  console.log('hello from select value');
-
-  return M.FormSelect.getInstance(document.querySelector(selector)).getSelectedValues()
-
 }

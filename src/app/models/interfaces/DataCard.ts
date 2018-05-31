@@ -1,5 +1,5 @@
 
-export class DataCard {
+export interface DataCard {
 
   name?: string
 

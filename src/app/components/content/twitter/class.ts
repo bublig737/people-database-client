@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import * as M from 'materialize-css'
-import { DataCard } from '../../../models/classes'
+import { DataCard } from '../../../models/interfaces'
 
 
 @Component({

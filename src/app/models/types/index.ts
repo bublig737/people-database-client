@@ -1,2 +1,1 @@
-export * from './serviceType/type'
-export * from './ID/type'
+export * from './serviceType'

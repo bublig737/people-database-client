@@ -8,7 +8,6 @@ import { DataForm } from '../../models/interfaces';
 import { VKService } from '../../services/API/vk'
 import { HttpService } from '../../services/http'
 
-
 @Component({
   selector: 'sidenav-component',
   templateUrl: './template.html',
@@ -16,6 +15,7 @@ import { HttpService } from '../../services/http'
   providers: [VKService, HttpService]
 })
 export class SideNavComponent implements OnInit {
+  
 
   name: string
   surname: string
@@ -23,6 +23,9 @@ export class SideNavComponent implements OnInit {
   id: string
 
   isIdSearch: boolean = false
+
+
+
 
   constructor(private vkService: VKService) {}
 
@@ -70,3 +73,5 @@ export class SideNavComponent implements OnInit {
 
   }
 }
+
+

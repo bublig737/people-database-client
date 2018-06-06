@@ -16,6 +16,7 @@ import { HttpService } from '../../services/http'
 })
 export class SideNavComponent implements OnInit {
   
+  count_age = age
 
   name: string
   surname: string

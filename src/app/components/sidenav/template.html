@@ -52,14 +52,14 @@
         <div class="input-field col s6 selectblock">
           <select class="age_from">
             <option value="0" disabled selected>От</option>
-            <option *ngFor="let item of age" [value]="item">{{item}}</option>
+            <option *ngFor="let item of count_age" [value]="item">{{item}}</option>
           </select>
         </div>
         <span>&nbsp;&nbsp;-&nbsp;&nbsp;</span>
         <div class="input-field col s6 selectblock">
           <select class="age_to">
             <option value="0" disabled selected>До</option>
-            <option *ngFor="let item of age" [value]="item">{{item}}</option>
+            <option *ngFor="let item of count_age" [value]="item">{{item}}</option>
           </select>
         </div>
       </li>

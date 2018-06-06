@@ -1,18 +1,18 @@
 {
   "files.exclude": {
-    // "README.md": true,
-    // "yarn.lock": true,
-    // // ".*": true,
-    // "src/karma.conf.js": true,
-    // "src/tsconfig.app.json": true,
-    // "src/tsconfig.spec.json": true,
-    // "src/tslint.json": true,
-    // "tslint.js": true,
-    // "protactor.conf.js": true,
-    // "package-lock.json": true,
-    // "src/environments": true,
-    // "tsconfig.json": false,
-    // "tslint.json": true
+    "README.md": true,
+    "yarn.lock": true,
+    // ".*": true,
+    "src/karma.conf.js": true,
+    "src/tsconfig.app.json": true,
+    "src/tsconfig.spec.json": true,
+    "src/tslint.json": true,
+    "tslint.js": true,
+    "protactor.conf.js": true,
+    "package-lock.json": true,
+    "src/environments": true,
+    "tsconfig.json": false,
+    "tslint.json": true
     
   }
 }

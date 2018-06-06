@@ -1,0 +1,7 @@
+Starting up http-server, serving hardcore
+Available on:
+  http://192.168.43.186:8080
+  http://127.0.0.1:8080
+Hit CTRL-C to stop the server
+http-server stopped.
+Завершить выполнение пакетного файла [Y(да)/N(нет)]? 
